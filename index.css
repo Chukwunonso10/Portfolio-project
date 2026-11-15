@@ -636,7 +636,7 @@ button, input, textarea {
 }
 
 @keyframes glowFloat {
-    0% { transform: scale(0.98); opacity: 0.6; }
+    0% { transform: fscale(0.98); opacity: 0.6; }
     100% { transform: scale(1.02); opacity: 0.85; }
 }
 
@@ -1444,9 +1444,6 @@ button, input, textarea {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================================================================
-   CONTACT SECTION (#contact)
-   ========================================================================== */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -1658,9 +1655,7 @@ button, input, textarea {
     box-shadow: var(--shadow-accent);
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+
 .footer {
     background: #060911;
     border-top: 1px solid var(--border-color);
@@ -1831,6 +1826,13 @@ button, input, textarea {
 }
 
 @media (max-width: 480px) {
+    .contact-wrapper{
+        display: block;
+    }
+
+    .channel-meta strong {
+        overflow-wrap: anywhere;
+    }
     .hero-title {
         font-size: 2.15rem;
     }
@@ -1850,5 +1852,10 @@ button, input, textarea {
     
     .about-stats {
         grid-template-columns: 1fr;
+    }
+
+
+    .contact-info-card{
+        margin-bottom: 40px;
     }
 }
